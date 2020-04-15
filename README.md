@@ -13,19 +13,19 @@ You can get more information in here [Grove_4Digital_Display](https://github.com
 ## How to binding with ArduPy
 - Install [AIP](https://github.com/Seeed-Studio/ardupy-aip)
 - Build firmware with Seeed ArduPy TM1637
-```
-    aip install Seeed-Studio/seeed-ardupy-tm1637
-    aip build
+```shell
+aip install Seeed-Studio/seeed-ardupy-tm1637
+aip build
 ```
 - Flash new firmware to you ArduPy board
-```
-    aip flash # + Ardupy Bin PATH
+```shell
+aip flash # + Ardupy Bin PATH
 ```
 For more examples of using AIP, please refer to [AIP](https://github.com/Seeed-Studio/ardupy-aip).
 
 ## Usage
 
-```
+```python
 from arduino import grove_4_digital_display
 import time
 
@@ -43,24 +43,19 @@ while True:
 
 ## API Reference
 
-- **clear()**
+- **clear()** :  Clear display
+```python
+nixie_tube.clear() 
+```
 
-    Clear display
-    ```
-    nixie_tube.clear() 
-    ```
-
-- **display(*number\<int\>*)**
-    
-    Display number
-    ```
-    nixie_tube.display(1234) # display 1234
-    ```
-- **show_colon** 
-    Control colon
-    ```
-    nixie_tube.show_colon = True # make colon light on
-    ```
+- **display(*number\<int\>*)** :Display number
+```python
+nixie_tube.display(1234) # display 1234
+```
+- **show_colon** : Control colon
+```python
+nixie_tube.show_colon = True # make colon light on
+```
 
 ----
 
